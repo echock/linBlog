@@ -19,7 +19,7 @@ title: CGI和FastCGI
 6. 执行完毕之后，将结果通过标准输出返回到子进程。
 7. 子进程将结果返回给客户端。
 
----
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -141,8 +141,7 @@ char *html_response(char *res, char *buf) {
  
     return res;
 }
----
-
+```
 # FastCGI 简介
 FastCGI是web服务器和处理程序之间通信的一种协议，是CGI的一种改进方案，它常驻进程，可以一直执行，在请求达到时不会话费时间去fork一个进程来处理，将CGI解释器进程保存在内存中并接受FASTCGI进程管理器调度，可以提供好的性能。
 ## 工作流程
